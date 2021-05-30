@@ -1,0 +1,39 @@
+import java.util.Hashtable;
+
+public class Assig3P2 {
+  public static void main(String args[]){
+    
+        Hashtable<Float, Integer> tbl1= new Hashtable<>();
+        Hashtable<Integer, Boolean> tbl2 = new Hashtable<>();
+        Hashtable<Boolean, String> tbl3 = new Hashtable<>();
+        Hashtable<String, Integer> tbl4 = new Hashtable<>();
+  
+        tbl1.put(4.11f, 4);
+        tbl1.put(5.01f, 5);
+        tbl1.put(6.96f, 6);
+  
+        tbl2.put(1, true);
+        tbl2.put(2, false);
+        tbl2.put(3, true );
+
+        tbl3.put(true, "true1");
+        tbl3.put(false, "false1");
+        tbl3.put(true, "true2");
+        tbl3.put(false, "false2");
+        tbl3.put(true, "true3");
+        tbl3.put(false, "false3");
+        tbl3.put(true, "true4");
+        tbl3.put(false, "false4");
+       //only last statement have meaning
+
+       tbl4.put("Asa", 1);
+       tbl4.put("Asa", 2);
+       tbl4.put("Assa", 3);
+       tbl4.put("Assa", 4);
+
+        System.out.println(tbl1+"  "); 
+        System.out.println(tbl2+"  ");
+        System.out.println(tbl3+"  ");
+        System.out.println(tbl4+"  ");
+    }
+}
