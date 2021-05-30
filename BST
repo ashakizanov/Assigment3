@@ -1,0 +1,59 @@
+public class Assig3P1 {
+  
+  public static void main(String[] args) {
+
+
+    BST bt = BST.create();
+
+    bt.sortio();
+  }
+
+}
+
+class BST {
+  static class Node {
+    String outp;
+    Node left, right;
+
+    Node(String temp) {
+      this.outp = temp;
+      left = null;
+      right = null;
+    }
+
+  }
+
+  Node node;
+
+
+  public void sortio() {
+    sortio(node);
+  }
+
+  private void sortio(Node node) {//in order
+    if (node == null) {
+      return;
+    }
+
+    sortio(node.left);
+    System.out.println(node.outp);
+    sortio(node.right);
+  }
+
+  public static BST create() {
+    BST tree = new BST();
+    Node node = new Node("6");
+    tree.node = node;
+    tree.node.right = new Node("8");
+    tree.node.right.left = new Node("7");
+    tree.node.right.right = new Node("9");
+    tree.node.left = new Node("4");
+    tree.node.left.left = new Node("2");
+    tree.node.left.left.left = new Node("1");
+    tree.node.left.left.right = new Node("3");
+    tree.node.left.right = new Node("5");
+
+    return tree;
+  }
+
+}
